@@ -8,12 +8,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+    @IBOutlet weak var counter: UILabel!
+    @IBOutlet weak var button: UIButton!
+    
+    var click = 0
+    
+    @IBAction func number(_ sender: Any) {
+        counter.text = "Значение счётчика: \(click)"
+        click += 1
     }
-
-
 }
-
